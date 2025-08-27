@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79F6CF">
+
+    <!-- Big rounded panel centered -->
+    <LinearLayout
+        android:id="@+id/panel"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_rules_panel"
+        android:paddingTop="32dp"
+        android:paddingBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintVertical_bias="0.5"
+
+        app:layout_constraintWidth_default="percent"
+        app:layout_constraintWidth_percent="0.92"
+        app:layout_constraintHeight_default="percent"
+        app:layout_constraintHeight_percent="0.55">
+
+        <!-- Button 1 -->
+        <LinearLayout
+            android:id="@+id/btnGameRules"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="22dp"
+            android:background="@drawable/bg_rule_chip"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Game Rules &amp; Guidelines"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:fontFamily="sans-serif-black" />
+        </LinearLayout>
+
+        <!-- Spacer between buttons -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="28dp" />
+
+        <!-- Button 2 -->
+        <LinearLayout
+            android:id="@+id/btnSafetyRules"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/bg_rule_chip"
+            android:gravity="center"
+            android:elevation="6dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Safety &amp; Usage Rules"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#111"
+                android:fontFamily="sans-serif-black" />
+        </LinearLayout>
+
+        <!-- Bottom padding inside panel -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="12dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

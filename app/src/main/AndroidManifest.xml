@@ -28,6 +28,9 @@
         <activity
             android:name=".LearnActivity"
             android:exported="false" />
+        <activity android:name=".RulesMenuActivity" android:exported="false" />
+        <activity android:name=".GameRulesActivity" android:exported="false" />
+        <activity android:name=".SafetyRulesActivity" android:exported="false" />
     </application>
 
 </manifest>

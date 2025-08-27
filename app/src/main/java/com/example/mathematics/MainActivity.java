@@ -2,7 +2,6 @@ package com.example.mathematics;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
@@ -18,44 +17,26 @@ public class MainActivity extends AppCompatActivity {
 
         // Initialize CardViews
         cardContents = findViewById(R.id.cardContents);
-        cardRules = findViewById(R.id.cardRules);
-        cardLearn = findViewById(R.id.cardLearn);
+        cardRules    = findViewById(R.id.cardRules);
+        cardLearn    = findViewById(R.id.cardLearn);
 
-        // Set click listeners
-        cardContents.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show toast for now
-                Toast.makeText(MainActivity.this, "Contents clicked!", Toast.LENGTH_SHORT).show();
+        // Contents (placeholder)
+        cardContents.setOnClickListener(v ->
+                        Toast.makeText(MainActivity.this, "Contents clicked!", Toast.LENGTH_SHORT).show()
+                // When ready:
+                // startActivity(new Intent(MainActivity.this, ContentsActivity.class));
+        );
 
-                // Uncomment when you create ContentsActivity
-                // Intent intent = new Intent(MainActivity.this, ContentsActivity.class);
-                // startActivity(intent);
-            }
-        });
+        // Rules → open the Rules menu (two buttons)
+        cardRules.setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, RulesMenuActivity.class))
+        );
 
-        cardRules.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show toast for now
-                Toast.makeText(MainActivity.this, "Rules clicked!", Toast.LENGTH_SHORT).show();
-
-                // Uncomment when you create RulesActivity
-                // Intent intent = new Intent(MainActivity.this, RulesActivity.class);
-                // startActivity(intent);
-            }
-        });
-
-        cardLearn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // Show toast for now
-                Toast.makeText(MainActivity.this, "What you'll learn clicked!", Toast.LENGTH_SHORT).show();
-
-                // Uncomment when you create LearnActivity
-                // Intent intent = new Intent(MainActivity.this, LearnActivity.class);
-                // startActivity(intent);
-            }
-        });
+        // What you'll learn (placeholder)
+        cardLearn.setOnClickListener(v ->
+                        Toast.makeText(MainActivity.this, "What you'll learn clicked!", Toast.LENGTH_SHORT).show()
+                // When ready:
+                // startActivity(new Intent(MainActivity.this, LearnActivity.class));
+        );
     }
 }
