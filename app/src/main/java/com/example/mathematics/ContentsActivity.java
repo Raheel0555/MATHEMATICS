@@ -1,12 +1,8 @@
 package com.example.mathematics;
 
 import android.os.Bundle;
-
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 public class ContentsActivity extends AppCompatActivity {
 
@@ -15,10 +11,9 @@ public class ContentsActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_contents);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+        // Removed the setOnApplyWindowInsetsListener using R.id.main, because
+        // activity_contents.xml does not define a view with id "main".
+        // If insets handling is needed later, add android:id="@+id/main"
+        // to the root view in activity_contents.xml and reattach the listener.
     }
 }

@@ -2,4 +2,10 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="bb">#00BCD4</color>
+        <color name="md_theme_light_surface">#FFFFFFFF</color>
+        <color name="md_theme_light_onSurface">#FF1A1C1E</color>
+        <color name="md_theme_light_primary">#FF006E5D</color>
+
+
 </resources>

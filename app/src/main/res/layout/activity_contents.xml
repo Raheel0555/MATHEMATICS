@@ -1,10 +1,395 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ContentsActivity">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundforcontnet"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="20dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="✨ Contents ✨"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="?attr/colorPrimary"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- 1) Addition -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#FFF9C4">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnAddition"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="1. Addition"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#B8860B"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 2) Subtraction -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#FFE0B2">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubtraction"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="2. Subtraction"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#8D6E63"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 3) Multiplication -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#FFCCBC">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnMultiplication"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="3. Multiplication"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#E65100"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 4) Division -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#E0F7FA">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDivision"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="4. Division"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#00838F"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 5) 0 to 1 Numbers -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#F8BBD0">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnZeroOne"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="5. 0 to 1 Numbers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#AD1457"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 6) 1 to 20 Numbers -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#B2DFDB">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOneTwenty"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="6. 1 to 20 Numbers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#004D40"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 7) 21 to 30 Numbers -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#E1BEE7">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTwentyOneThirty"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="7. 21 to 30 Numbers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#6A1B9A"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 8) 31 to 99 Numbers -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#B3E5FC">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnThirtyOneNinetyNine"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="8. 31 to 99 Numbers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#0288D1"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 9) Counting -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#FFECB3">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCounting"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="9. Counting"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#6D4C41"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 10) Shapes -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#B2DFDB">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnShapes"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="10. Shapes"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#00796B"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 11) Time Measurement -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#FFECB3">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTime"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="11. Time Measurement"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#F57C00"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 12) Coins and Currency -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#B2DFDB">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCurrency"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="12. Coins and Currency"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#004D40"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 13) Even Numbers -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#DCEDC8">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnEven"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="13. Even Numbers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#558B2F"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 14) Odd Numbers -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#E1BEE7">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnOdd"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="14. Odd Numbers"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#6A1B9A"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 15) Number Comparison -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#FFCCBC">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCompare"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="15. Number Comparison (&gt;, &lt;, =)"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#E65100"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 16) Calendar Basics -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            app:cardCornerRadius="24dp"
+            app:cardUseCompatPadding="true"
+            app:cardBackgroundColor="#C5CAE9">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCalendar"
+                style="@style/Widget.Material3.Button"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:text="16. Calendar Basics"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#3F51B5"
+                android:insetTop="0dp"
+                android:insetBottom="0dp"
+                android:background="@android:color/transparent"
+                app:rippleColor="@android:color/white"/>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

@@ -7,23 +7,34 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:fillViewport="true">
 
+        <!-- Full-screen centering container -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:orientation="vertical"
-            android:background="@drawable/bg_rules_text_panel"
-            android:padding="18dp">
+            android:gravity="center">
 
-            <TextView
-                android:id="@+id/tvSafetyRules"
-                android:layout_width="match_parent"
+            <!-- Rounded text panel -->
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#152018"
-                android:textSize="18sp"
-                android:lineSpacingExtra="6dp"
-                android:text="1. Always have an adult nearby when using the app\n\n2. Take breaks every 15–20 minutes\n\n3. Use the app in good lighting\n\n4. Keep the device at a comfortable distance" />
+                android:orientation="vertical"
+                android:background="@drawable/bg_rules_text_panel"
+                android:padding="18dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvSafetyRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#152018"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="1. Always have an adult nearby when using the app\n\n2. Take breaks every 15–20 minutes\n\n3. Use the app in good lighting\n\n4. Keep the device at a comfortable distance" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>

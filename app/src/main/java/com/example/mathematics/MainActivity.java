@@ -2,7 +2,6 @@ package com.example.mathematics;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
@@ -20,23 +19,19 @@ public class MainActivity extends AppCompatActivity {
         cardRules    = findViewById(R.id.cardRules);
         cardLearn    = findViewById(R.id.cardLearn);
 
-        // Contents (placeholder)
+        // Contents → open the Contents screen
         cardContents.setOnClickListener(v ->
-                        Toast.makeText(MainActivity.this, "Contents clicked!", Toast.LENGTH_SHORT).show()
-                // When ready:
-                // startActivity(new Intent(MainActivity.this, ContentsActivity.class));
+                startActivity(new Intent(MainActivity.this, ContentsActivity.class))
         );
 
-        // Rules → open the Rules menu (two buttons)
+        // Rules → open the Rules menu
         cardRules.setOnClickListener(v ->
                 startActivity(new Intent(MainActivity.this, RulesMenuActivity.class))
         );
 
-        // What you'll learn (placeholder)
+        // What you'll learn → open the learning screen
         cardLearn.setOnClickListener(v ->
-                        Toast.makeText(MainActivity.this, "What you'll learn clicked!", Toast.LENGTH_SHORT).show()
-                // When ready:
-                // startActivity(new Intent(MainActivity.this, LearnActivity.class));
+                startActivity(new Intent(MainActivity.this, WhatYoullLearnActivity.class))
         );
     }
 }

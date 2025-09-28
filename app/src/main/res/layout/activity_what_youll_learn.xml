@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#79F6CF">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal">
+
+            <!-- Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@drawable/bg_rules_text_panel"
+                android:padding="18dp">
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="What you'll learn"
+                    android:textColor="#0F1E28"
+                    android:textStyle="bold"
+                    android:textSize="22sp"
+                    android:paddingBottom="6dp" />
+
+                <!-- Subtitle -->
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Overview of all topics"
+                    android:textColor="#3A4A55"
+                    android:textSize="14sp"
+                    android:paddingBottom="12dp" />
+
+                <!-- Ordered list: one-by-one -->
+                <TextView
+                    android:id="@+id/tvLearnBody"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#152018"
+                    android:textSize="16sp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="1) Addition — Addition of two simple numbers with the help of a bubble shooter game.\n2) Subtraction — Subtraction of two numbers by popping balloons and writing answers.\n3) Multiplication — Drop apples in the basket as per the given question.\n4) Division — Share or split into equal parts.\n5) 0 to 1 numbers — Understand zero and one with real examples.\n6) 1 to 20 numbers — Number names, order, and counting fluency.\n7) 21 to 30 numbers — Continue counting and recognize patterns.\n8) 31 to 99 numbers — Tens and ones place practice.\n9) Counting — Count forward/backward and skip‑count basics.\n10) Shapes — Identify and sort common 2D shapes.\n11) Time Measurement — Read clocks and understand hours/minutes.\n12) Coins and Currency — Recognize coins/notes and make amounts.\n13) Even Numbers — Numbers divisible by 2 with equal pairs.\n14) Odd Numbers — Numbers that leave one unpaired.\n15) Number comparison — Use &gt;, &lt;, = to compare values.\n16) Calendar Basics — Days, weeks, and months on a calendar." />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

@@ -4,28 +4,38 @@
     android:layout_height="match_parent"
     android:background="#79F6CF">
 
-    <!-- Rounded text panel -->
+    <!-- Make child fill screen so centering works -->
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:fillViewport="true">
 
+        <!-- This container centers its child in the screen -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:background="@drawable/bg_rules_text_panel"
-            android:padding="18dp"
-            >
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tvRules"
-                android:layout_width="match_parent"
+            <!-- Rounded text panel (visible, non-zero width) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#152018"
-                android:textSize="18sp"
-                android:lineSpacingExtra="6dp"
-                android:text="1. Read each instruction and play the content properly\n\n2. Tap or click on your answer choice.\n\n3. You cannot skip questions - answer each one to proceed.\n\n4. If you get an answer wrong, don't worry! Try again.\n\n5. Practice makes perfect - replay any section anytime." />
+                android:orientation="vertical"
+                android:background="@drawable/bg_rules_text_panel"
+                android:padding="18dp"
+                android:layout_gravity="center">
+
+                <TextView
+                    android:id="@+id/tvRules"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#152018"
+                    android:textSize="18sp"
+                    android:lineSpacingExtra="6dp"
+                    android:text="1. Read each instruction and play the content properly\n\n2. Tap or click on your answer choice.\n\n3. You cannot skip questions - answer each one to proceed.\n\n4. If you get an answer wrong, don't worry! Try again.\n\n5. Practice makes perfect - replay any section anytime." />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </FrameLayout>
